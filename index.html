@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <style>
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: rgb(140, 178, 247);
+            color: aliceblue;
+
+         
+ 
+        }
+     fieldset > legend{
+        text-align: center;
+        font-size: 20px;
+        color: aqua;
+     }
+
+     textarea{
+        background-color: aqua;
+       color: black;
+        font-size: 18px;
+     }
+      
+    </style>
+    <h1>Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+
+        <fieldset>
+            <legend>
+                SEUS DADOS;
+            </legend>
+            <p>
+                <label for="iusu">Usuário:</label>
+                <input type="text" name="iusu" id="iusu" placeholder="seu nome" required minlength="5" maxlength="12" autocomplete="on" >
+
+               
+            </p>
+            <p>
+                <label for="isenha">Senha:</label>
+                <input type="password" name="isenha" id="isenha" placeholder="sua senha" required autocomplete="current-password" minlength="5"
+                maxlength="8">
+            </p>
+            <p>
+                <label for="idade">Idade</label>
+                <input type="number" name="idade" id="idade" value="15" min="15" max="30" step="1" > 
+            </p>
+            <p>
+                <input type="radio" name="sexo" id="mascu"> <label for="mascu">Masculino</label>
+            </p>
+            <p>
+                <input type="radio" name="sexo" id="ifem"><label for="ifem">Feminino</label>
+            </p>
+            <p>
+                <label for="iset">Estado</label>
+                <select name="Estado" id="iset">
+
+                    <optgroup label="Sudeste">
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="MG ">Minas Gerais</option>
+                    </optgroup>
+                </select>
+            </p>
+           
+            <input type="reset" value="Limpar">
+          
+        </fieldset>
+        <fieldset>
+            <legend>Responda o questionário</legend>
+            
+            <P>
+                <input type="checkbox" name="ifut" id="ifut" checked>
+                <label for="ifut">FUTEBOL</label>
+            </P>
+            <P><input type="checkbox" name="ibasq" id="ibasq"><label for="ibasq">BASQUETE</label></P>
+            <p><input type="checkbox" name="ivolei" id="volei"><label for="volei">VÔLEI</label></p>
+            <p><input type="checkbox" name="ihand" id="ihand"><label for="ihand">HANDEBOL</label></p>
+
+<input type="reset" value="Limpar">
+           
+        </fieldset>
+        <fieldset>
+            <legend>Finalize o questionário</legend>
+            <p>
+                <label for="ihora ">Horário:</label>
+                <input type="time" name="ihora" id="ihora" required value="00:00" >
+            </p>
+            <label for="month">Mês</label>
+            <input type="month" name="imonth" id="month" value="2023-01">
+            <p>
+             <label for="idate">Data</label>
+             <input type="date" name="idate" id="idate" value="2023-01-01">
+            </p>
+          
+            <input type="reset" value="Limpar">
+        </fieldset>
+        <fieldset>
+            <legend>Responda abaixo</legend>
+            <p>
+          <label for="irange">Avalie</label>
+          <input type="range" name="irange" id="irange" min="0" max="10" value="5">
+            </p>
+           
+                <p><label for="imsg">Mensagem</label></p>
+                <textarea name="imsg" id="imsg" cols="30" rows="10"></textarea>
+            
+                <p>
+                    <label for="icor">Selecione uma cor:</label>
+                    <input type="color" name="icolor" id="icolor" value="#E0FFFF">
+                </p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+        </fieldset>
+    </form>
+</body>
+</html>
